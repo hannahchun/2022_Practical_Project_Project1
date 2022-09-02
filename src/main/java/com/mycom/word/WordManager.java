@@ -22,9 +22,9 @@ public class WordManager {
                 wordCRUD.addWord();
             }
             if(menu == 1) { // list
+                wordCRUD.listAll();
             }
         }
-
     }
 
 	/*

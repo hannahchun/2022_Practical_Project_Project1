@@ -49,11 +49,16 @@ public class Word {
 
 	/*
 	 1 * 		electric 전기의, 전기를 생산하는
-	 2 * 		    pole 기둥, 장
+	 2 * 		    pole 기둥, 장 */
 
 
     @Override
     public String toString() {
-        return;
-    } */
+        String slevel = "";
+        for(int i=0 ; i<level ; i++) slevel +="*";
+        String str = String.format("%-3s", slevel)
+                + String.format("%15s", word) + " " + meaning;
+        return str;
+    }
+
 }
