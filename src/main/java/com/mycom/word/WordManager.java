@@ -18,11 +18,15 @@ public class WordManager {
                 System.out.println("\n프로그램 종료!\n");
                 break;
             }
-            if(menu == 4) { // create
+
+            else if(menu == 1) { // list
+                wordCRUD.listAll();
+            }
+            else if(menu == 4) { // create
                 wordCRUD.add();
             }
-            if(menu == 1) { // list
-                wordCRUD.listAll();
+            else if(menu == 5) { // update
+                wordCRUD.update();
             }
         }
     }
