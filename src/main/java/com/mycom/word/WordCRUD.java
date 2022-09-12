@@ -55,6 +55,24 @@ public class WordCRUD implements ICRUD{
         System.out.println();
     }
 
+    public void listAll(int level) {
+        int j=0;
+        System.out.println("\n--------------------------------");
+        for(int i = 0 ; i<list.size(); i++) {
+            int ilevel = list.get(i).getLevel();
+            if(ilevel != level) continue;
+            System.out.print((j+1) + " ");
+            System.out.println(list.get(i).toString());
+            j++;
+        }
+        System.out.println("--------------------------------");
+        System.out.println();
+
+        if(j == 0) {
+            System.out.println("해당하는 단어가 없습니다.\n");
+        }
+    }
+
     public ArrayList<Integer> listAll(String keyword) {
         ArrayList<Integer> idList = new ArrayList<>();
         int j=0;
@@ -70,6 +88,21 @@ public class WordCRUD implements ICRUD{
         System.out.println("--------------------------------");
         System.out.println();
         return idList;
+    }
+
+    /* => 원하는 메뉴는? 2
+	   => 원하는 레벨은? (1~3) 2
+	   ----------------------------------
+	   1 *			transfer	옮기다, 이동하다
+       2 *			scatter		흩뿌리다, 살포하다
+	 */
+
+    @Override
+    public void searchLevel() {
+        // TODO Auto-generated method stub
+        System.out.print("=> 원하는 레벨은? (1: 초급, 2: 중급, 3: 고급) ");
+        int level = s.nextInt();
+        listAll(level);
     }
 
     /*
