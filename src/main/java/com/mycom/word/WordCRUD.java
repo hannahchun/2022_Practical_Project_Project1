@@ -91,14 +91,53 @@ public class WordCRUD implements ICRUD{
         System.out.print("=> 수정할 단어 검색: ");
         String keyword = s.next();
         ArrayList<Integer> idlist = this.listAll(keyword);
-        System.out.print("=> 수정할 번호 선택 : ");
+
+        if (idlist.size() != 0) {
+            System.out.print("=> 수정할 번호 선택 : ");
+            int id = s.nextInt();
+            s.nextLine();
+            System.out.print("=> 뜻 입력 : ");
+            String meaning = s.nextLine();
+            Word word = list.get(idlist.get(id - 1));
+            word.setMeaning(meaning);
+            System.out.println("\n단어가 수정되었습니다. ");
+            System.out.println();
+        }
+        else {
+            System.out.println("해당하는 단어가 없습니다. ");
+            System.out.println();
+        }
+    }
+
+    /* => 원하는 메뉴는? 6
+       => 삭제할 단어 검색 : er
+
+       ----------------------------------
+       1 *          transfer	옮기다, 이동하다
+       2 *			scatter		흩뿌리다, 살포하다
+
+       => 삭제할 번호 선택 : 1
+       => 정말로 삭제하실래요?(Y/n) Y
+
+       단어가 삭제되었습니다.
+    */
+
+    @Override
+    public void delete() {
+        System.out.print("=> 삭제할 단어 검색: ");
+        String keyword = s.next();
+        ArrayList<Integer> idlist = this.listAll(keyword);
+        System.out.print("=> 삭제할 번호 선택 : ");
         int id = s.nextInt();
         s.nextLine();
-        System.out.print("=> 뜻 입력 : ");
-        String meaning = s.nextLine();
-        Word word = list.get(idlist.get(id-1));
-        word.setMeaning(meaning);
-        System.out.println("\n단어가 수정되었습니다. ");
+        System.out.print("=> 정말로 삭제하실래요?(Y/n) : ");
+        String ans = s.next();
+        if(ans.equalsIgnoreCase("y")) {
+            list.remove((int) idlist.get(id-1)); // 해당 인덱스의 객체 삭
+            // java.util.ArrayList.remove(Object o)는 객체 혹은, 정수로 어떤 인덱스의 객체를 삭제할지 지정해야
+            System.out.println("\n단어가 삭제되었습니다. ");
+        } else
+            System.out.println("\n취소되었습니다. ");
         System.out.println();
     }
 
