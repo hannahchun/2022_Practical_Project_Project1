@@ -87,6 +87,11 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("--------------------------------");
         System.out.println();
+
+        if(j == 0) {
+            System.out.println("해당하는 단어가 없습니다.\n");
+        }
+
         return idList;
     }
 
@@ -103,6 +108,21 @@ public class WordCRUD implements ICRUD{
         System.out.print("=> 원하는 레벨은? (1: 초급, 2: 중급, 3: 고급) ");
         int level = s.nextInt();
         listAll(level);
+    }
+
+    /* => 원하는 메뉴는? 2
+	   => 검색할 단어는? er
+	   ----------------------------------
+	   1 *			transfer	옮기다, 이동하다
+       2 *			scatter		흩뿌리다, 살포하다
+	 */
+
+    @Override
+    public void searchWord() {
+        // TODO Auto-generated method stub
+        System.out.print("=> 검색할 단어는? ");
+        String keyword = s.next();
+        listAll(keyword);
     }
 
     /*
@@ -134,10 +154,6 @@ public class WordCRUD implements ICRUD{
             Word word = list.get(idlist.get(id - 1));
             word.setMeaning(meaning);
             System.out.println("\n단어가 수정되었습니다. ");
-            System.out.println();
-        }
-        else {
-            System.out.println("해당하는 단어가 없습니다. ");
             System.out.println();
         }
     }
@@ -172,10 +188,6 @@ public class WordCRUD implements ICRUD{
                 System.out.println("\n단어가 삭제되었습니다. ");
             } else
                 System.out.println("\n취소되었습니다. ");
-            System.out.println();
-        }
-        else {
-            System.out.println("해당하는 단어가 없습니다. ");
             System.out.println();
         }
     }
