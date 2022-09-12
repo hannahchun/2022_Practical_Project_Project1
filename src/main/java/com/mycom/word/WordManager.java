@@ -19,7 +19,7 @@ public class WordManager {
                 break;
             }
             if(menu == 4) { // create
-                wordCRUD.addWord();
+                wordCRUD.add();
             }
             if(menu == 1) { // list
                 wordCRUD.listAll();
