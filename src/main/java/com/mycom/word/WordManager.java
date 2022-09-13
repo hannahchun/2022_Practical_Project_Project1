@@ -12,6 +12,9 @@ public class WordManager {
     }
 
     public void start() {
+        // 파일에서 데이터를 읽어와서 리스트를 만들어놓고 시작
+        wordCRUD.loadFile();
+
         while(true) {
             int menu = selectMenu();
             if(menu == 0) {
