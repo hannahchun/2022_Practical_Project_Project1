@@ -14,10 +14,10 @@
 3|reduce to|(어떤 상태로) 몰아넣다
 1|tacit|암묵적인, 무언의 
 1|spare|여분의, 짬이 있는
-1|resolve|(문제 등을) 해결하다, 굳게 다짐하다
 2|judical|사법재판의 
 1|respite|(곤경, 불쾌한 일의) 일시적인 중단, 유예
 3|ebb and flow|(조수처럼) 밀려 왔다 밀려 갔다 하다, 성쇠를 되풀이하다 
 3|flare-up|(분노 등의) 갑작스러운 표출
 1|renown|명성
-1|covenant|계약
+1|covenant|약속
+1|block|막다

@@ -61,4 +61,8 @@ public class Word {
         return str;
     }
 
+    // 파일에 데이터를 어떤 형식으로 쓸지 지정
+    public String toFileString() {
+        return this.level + "|" + this.word + "|" + this.meaning;
+    }
 }
