@@ -28,6 +28,9 @@
 # 7. 파일 저장
 # <img src="https://github.com/hannahchun/2022_Practical_Project_Project1/blob/main/screenshots/7.%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%E1%86%BC.png?raw=true">
 
+# 파일 내용 
+# <img src="https://github.com/hannahchun/2022_Practical_Project_Project1/blob/main/screenshots/%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%82%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC.png?raw=true">
+
 # 단어 조회
 # <img src="https://github.com/hannahchun/2022_Practical_Project_Project1/blob/main/screenshots/%E1%84%83%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%A5%20%E1%84%8C%E1%85%A9%E1%84%92%E1%85%AC.png?raw=true">
 
